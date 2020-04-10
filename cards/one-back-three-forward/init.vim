@@ -6,7 +6,7 @@ vertical res 35
 wincmd l
 edit front/input.js
 set modifiable
-silent diffpatch front/patch
+silent belowright diffpatch front/patch
 
 " Setup back of card
 tabedit

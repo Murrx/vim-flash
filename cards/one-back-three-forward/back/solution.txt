@@ -1,0 +1,5 @@
+- 'f+' to move the cursor to the first + sign
+- 's + ' to remove the + under the cursor, enter edit mode and type + sign surounded by whitespace
+- ';' to move to the next plus sign
+- '.' to repeat the last change
+- repeat ';' and '.'
