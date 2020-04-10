@@ -1,12 +1,11 @@
 " Setup front of card
 set nomodifiable
-args front/*
+view front/objective.txt
 vsplit
 vertical res 35
 wincmd l
-next
-split
-next
+edit front/input.js
+silent belowright diffpatch front/patch
 set modifiable
 
 " Setup back of card
