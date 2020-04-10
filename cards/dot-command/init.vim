@@ -1,10 +1,10 @@
 set nomodifiable
-view front-objective
+view front/objective.txt
 vsplit
 wincmd l
-view front-goal
+view front/goal.js
 tabedit
-view back
+view back/solution.txt
 tabp
-split front-initial
+split front/initial.js
 set modifiable
