@@ -1,0 +1,3 @@
+replace the first and last occurance of the word 'content' with 'copy'
+
+try to use the '*' and '.' commands

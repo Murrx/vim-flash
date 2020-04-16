@@ -1,0 +1,5 @@
+- put the cursor on the word content
+- use '*' to search for the word under the cursor
+- use 'cw' to replace the word 'content' with 'copy'
+- use 'n' to move to the next occurance of the word
+- use '.' to repeat last change

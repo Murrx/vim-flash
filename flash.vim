@@ -39,4 +39,4 @@ if len(g:result) == 0
     call LoadCards()
 endif
 
-call InitEditor(g:result[0])
+call InitEditor(g:result[1])
