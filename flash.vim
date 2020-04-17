@@ -1,10 +1,10 @@
 let g:result = []
 function! LoadCards()
-    let cards_dir = 'cards'
+    let cards_dir = 'cards/practical-vim/'
     let sub_dirs = systemlist('ls '.cards_dir)
 
     for dir in sub_dirs
-        let card_dir = cards_dir.'/'.dir
+        let card_dir = cards_dir.dir
         let card_string = join(readfile(card_dir.'/card.json'))
         let card_data = json_decode(card_string)
 
