@@ -23,20 +23,24 @@ endfunction
 function InitEditor(card)
    " Setup front of card
    execute 'view' a:card.objective_path
+   silent file Objective
    call MakeScratchBuffer()
    vsplit
    vertical res 35
    wincmd l
 
    execute 'edit' a:card.input_path
+   silent file Input
    call MakeScratchBuffer()
 
    execute 'silent belowright diffpatch' a:card.output_path
+   silent file Output
    call MakeScratchBuffer()
    
    " Setup back of card
    tabedit
    execute 'view' a:card.solution_path
+   silent file Solution
    call MakeScratchBuffer()
    
    " Return view to front of card
