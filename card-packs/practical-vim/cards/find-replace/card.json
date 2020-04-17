@@ -3,7 +3,7 @@
         "uri": "objective.txt"
     },
     "input": {
-        "uri": "../../src-examples/practical-vim/the_vim_way/2_foo_bar.js"
+        "uri": "../../src-examples/practical-vim/the_vim_way/1_copy_content.txt"
     },
     "output": {
         "uri": "patch"

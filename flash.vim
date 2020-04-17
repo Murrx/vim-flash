@@ -1,4 +1,6 @@
 let g:result = []
+let g:card_index = 0
+
 function! LoadCards()
     let package_dir = 'card-packs/practical-vim/'
     let cards_dir = package_dir . 'cards/'
@@ -52,4 +54,14 @@ if len(g:result) == 0
     call LoadCards()
 endif
 
-call InitEditor(g:result[0])
+function! LoadNext()
+    call LoadCards()
+    only
+    tabonly
+    let index = g:card_index % len(g:result)
+    echo index
+    call InitEditor(g:result[index])
+    let g:card_index = g:card_index + 1
+endfunction
+
+command FlashVim call LoadNext()
