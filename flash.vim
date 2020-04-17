@@ -1,15 +1,16 @@
 let g:result = []
 function! LoadCards()
-    let cards_dir = 'cards/practical-vim/'
+    let package_dir = 'card-packs/practical-vim/'
+    let cards_dir = package_dir . 'cards/'
     let sub_dirs = systemlist('ls '.cards_dir)
 
     for dir in sub_dirs
         let card_dir = cards_dir.dir
-        let card_string = join(readfile(card_dir.'/card.json'))
-        let card_data = json_decode(card_string)
+        let json_string = join(readfile(card_dir.'/card.json'))
+        let card_data = json_decode(json_string)
 
         let objective_path = card_dir.'/'.card_data.objective.uri
-        let input_path =  card_data.input.uri  " note: this uses other pathing than other files. Needs fixing
+        let input_path =  card_dir.'/'.card_data.input.uri 
         let output_path =  card_dir.'/'.card_data.output.uri
         let solution_path =  card_dir.'/'.card_data.solution.uri
 
