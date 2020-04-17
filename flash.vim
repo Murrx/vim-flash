@@ -19,23 +19,32 @@ endfunction
 
 function! InitEditor(card)
    " Setup front of card
-   set nomodifiable
    execute 'view' a:card.objective_path
+   call MakeScratchBuffer()
    vsplit
    vertical res 35
    wincmd l
+
    execute 'edit' a:card.input_path
-   set modifiable
+   call MakeScratchBuffer()
+
    execute 'silent belowright diffpatch' a:card.output_path
+   call MakeScratchBuffer()
    
    " Setup back of card
    tabedit
    execute 'view' a:card.solution_path
-   set nomodifiable
+   call MakeScratchBuffer()
    
    " Return view to front of card
    tabp
    wincmd k
+endfunction
+
+function! MakeScratchBuffer()
+   setlocal buftype=nofile
+   setlocal bufhidden=hide
+   setlocal noswapfile
 endfunction
 
 if len(g:result) == 0
