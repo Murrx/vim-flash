@@ -1,7 +1,7 @@
 let g:result = []
 let g:card_index = 0
 
-function! LoadCards()
+function LoadCards()
     let package_dir = 'card-packs/practical-vim/'
     let cards_dir = package_dir . 'cards/'
     let sub_dirs = systemlist('ls '.cards_dir)
@@ -20,7 +20,7 @@ function! LoadCards()
     endfor
 endfunction
 
-function! InitEditor(card)
+function InitEditor(card)
    " Setup front of card
    execute 'view' a:card.objective_path
    call MakeScratchBuffer()
@@ -44,13 +44,13 @@ function! InitEditor(card)
    wincmd k
 endfunction
 
-function! MakeScratchBuffer()
+function MakeScratchBuffer()
    setlocal buftype=nofile
    setlocal bufhidden=hide
    setlocal noswapfile
 endfunction
 
-function! ResetEditor()
+function ResetEditor()
     silent only
     silent tabonly
     %bd  " delete all buffers. Need to find a more elegant way to reset editor state
@@ -60,7 +60,7 @@ if len(g:result) == 0
     call LoadCards()
 endif
 
-function! LoadNext()
+function LoadNext()
     call LoadCards()  " Todo: find a more elegant way to do this
     call ResetEditor()
 
