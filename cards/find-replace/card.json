@@ -1,15 +1,15 @@
 {
     "objective": {
-        "uri": "front/objective.txt"
+        "uri": "objective.txt"
     },
     "input": {
         "uri": "src-examples/practical-vim/the_vim_way/2_foo_bar.js"
     },
     "output": {
-        "uri": "front/patch"
+        "uri": "patch"
     },
     "solution": {
-        "uri": "back/solution.txt"
+        "uri": "solution.txt"
     },
 }
 
