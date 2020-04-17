@@ -50,16 +50,21 @@ function! MakeScratchBuffer()
    setlocal noswapfile
 endfunction
 
+function! ResetEditor()
+    silent only
+    silent tabonly
+    %bd  " delete all buffers. Need to find a more elegant way to reset editor state
+endfunction
+
 if len(g:result) == 0
     call LoadCards()
 endif
 
 function! LoadNext()
-    call LoadCards()
-    only
-    tabonly
+    call LoadCards()  " Todo: find a more elegant way to do this
+    call ResetEditor()
+
     let index = g:card_index % len(g:result)
-    echo index
     call InitEditor(g:result[index])
     let g:card_index = g:card_index + 1
 endfunction
