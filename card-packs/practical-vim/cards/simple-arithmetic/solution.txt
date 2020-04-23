@@ -1,0 +1,5 @@
+- position the cursor on the last line ('G')
+- replace '.blog' for '.news' ('cW'.news)
+- use the substract command to lower the number by 180 ('180<C-x>')
+- jump to the next word ('w')
+- use the add command to increment the second number  by 180 ('180<C-a>')

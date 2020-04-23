@@ -1,0 +1,5 @@
+Duplicate the last line and:
+ - replace the word 'blog' with 'news'
+ - change the first number on this line to -180px;
+ - change the second number on this line to 30px;
+

@@ -1,0 +1,15 @@
+{
+    "objective": {
+        "uri": "objective.txt"
+    },
+    "input": {
+        "uri": "../../src-examples/practical-vim/normal_mode/sprite.css"
+    },
+    "output": {
+        "uri": "patch"
+    },
+    "solution": {
+        "uri": "solution.txt"
+    },
+}
+
